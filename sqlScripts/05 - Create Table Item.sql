@@ -1,7 +1,7 @@
 if not exists (select * from sysobjects where name='Item' and xtype='U')
 BEGIN
 
- CREATE TABLE [dbo].[MentorSession](
+ CREATE TABLE [dbo].[Item](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[Description] [varchar](100) NOT NULL,
 	[Price] [Float] NULL
