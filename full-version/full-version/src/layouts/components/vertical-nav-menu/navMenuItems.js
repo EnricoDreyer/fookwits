@@ -42,6 +42,12 @@ export default [
         i18n: 'Analytics'
       },
       {
+        url: '/QuickBalancing',
+        name: 'cxvcxvxcvxc',
+        slug: 'cxvcxvxvxvxccv',
+        i18n: 'xcvxcvxcvxcvxvc'
+      },
+      {
         url: '/dashboard/ecommerce',
         name: 'eCommerce',
         slug: 'dashboard-ecommerce',
@@ -90,7 +96,7 @@ export default [
         i18n: 'eCommerce',
         submenu: [
           {
-            url: '/apps/eCommerce/shop',
+            url: '/apps/eCommerce/EEnricoShop',
             name: 'Shop',
             slug: 'ecommerce-shop',
             i18n: 'Shop'
