@@ -4,7 +4,9 @@ BEGIN
  CREATE TABLE [dbo].[Item](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[Description] [varchar](100) NOT NULL,
-	[Price] [Float] NULL
+	[Price] [Float] NOT NULL,
+	[Tumbnail] 	varbinary(MAX) NULL,
+	[Image] varbinary(MAX) NULL,
 
 CONSTRAINT [PK_Item] PRIMARY KEY CLUSTERED 
 (
