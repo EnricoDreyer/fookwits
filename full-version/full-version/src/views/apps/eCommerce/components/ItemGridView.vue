@@ -15,7 +15,7 @@
 
                     <!-- ITEM IMAGE -->
                     <div class="item-img-container bg-white h-64 flex items-center justify-center mb-4 cursor-pointer" @click="navigate_to_detail_view">
-                        <img :src="item.image" :alt="item.name" class="grid-view-img px-4">
+                        <!--<img :src="item.image" :alt="item.name" class="grid-view-img px-4"> -->
                     </div>
                     <div class="item-details px-4">
 
