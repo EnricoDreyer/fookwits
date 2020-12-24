@@ -24,7 +24,7 @@ namespace projectTwo.Controllers
             {
                 Id = x.Id,
                 Description = x.Description,
-                Price = x.Price
+                Price = (double)x.Price
              }).ToList();
 
              return new JsonResult(items);
