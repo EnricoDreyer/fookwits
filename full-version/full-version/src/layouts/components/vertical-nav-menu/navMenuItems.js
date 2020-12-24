@@ -91,9 +91,9 @@ export default [
       },
       {
         url: null,
-        name: 'eCommerce',
+        name: 'Menu',
         icon: 'ShoppingCartIcon',
-        i18n: 'eCommerce',
+        i18n: 'Menu',
         submenu: [
           {
             url: '/apps/eCommerce/EEnricoShop',
