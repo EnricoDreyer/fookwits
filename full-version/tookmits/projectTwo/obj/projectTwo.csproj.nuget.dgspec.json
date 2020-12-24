@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\fookwit\\full-version\\tookmits\\projectTwo\\projectTwo.csproj": {}
+    "C:\\Projects\\fookwit\\full-version\\tookmits\\projectTwo\\projectTwo.csproj": {}
   },
   "projects": {
-    "C:\\fookwit\\full-version\\tookmits\\projectTwo\\projectTwo.csproj": {
+    "C:\\Projects\\fookwit\\full-version\\tookmits\\projectTwo\\projectTwo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\fookwit\\full-version\\tookmits\\projectTwo\\projectTwo.csproj",
+        "projectUniqueName": "C:\\Projects\\fookwit\\full-version\\tookmits\\projectTwo\\projectTwo.csproj",
         "projectName": "projectTwo",
-        "projectPath": "C:\\fookwit\\full-version\\tookmits\\projectTwo\\projectTwo.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\fookwit\\full-version\\tookmits\\projectTwo\\obj\\",
+        "projectPath": "C:\\Projects\\fookwit\\full-version\\tookmits\\projectTwo\\projectTwo.csproj",
+        "packagesPath": "C:\\Users\\EnricoIT\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\fookwit\\full-version\\tookmits\\projectTwo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\EnricoIT\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -30,6 +31,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -41,6 +43,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "EntityFramework": {
               "target": "Package",
@@ -107,7 +110,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

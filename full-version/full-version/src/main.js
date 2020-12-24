@@ -17,10 +17,96 @@ import 'material-icons/iconfont/material-icons.css' //Material Icons
 import 'vuesax/dist/vuesax.css' // Vuesax
 Vue.use(Vuesax)
 
-
 // axios
 import axios from './axios.js'
 Vue.prototype.$http = axios
+
+Vue.prototype.$buildUrl = function(path) {
+  //return "https://fams24api.azurewebsites.net/api/" + path;
+  return "https://localhost:44311/api/" + path;
+ }
+
+Vue.prototype.$ajaxGet = function (self, myUrl, onSuccess, onFinally) {
+  var mySelf = this;
+  return axios({
+    method: 'get',
+    url: mySelf.$buildUrl(myUrl),
+  }).then(response => {
+    if (onSuccess && typeof onSuccess == "function")
+      onSuccess(response);
+  })
+    .catch(function (error) {
+      var exception = "";
+      var colour = "danger";
+      if (error.response) {
+        if (error.response.status == 401) {
+          exception = error.response.data.message;
+          colour = "warning";
+        } else if (error.response.status == 405) {
+          exception = error.response.data.message;
+          colour = "warning";
+        } else if (error.response.status == 498) {
+          localStorage.setItem("accessToken","");
+          exception = error.response.data.message;
+          colour = "warning";
+        }
+      } else {
+        exception = error.message;
+        colour = "danger";
+      }
+      mySelf.$vs.notify({
+        time: 6000,
+        title: 'Error',
+        text: exception,
+        color: colour,
+        iconPack: 'feather',
+        icon: 'icon-alert-circle'
+      });
+    })
+    .finally(onFinally)
+}
+
+
+Vue.prototype.$ajaxPost = function (self, myUrl, formData, onSuccess, onFinally) {
+  var mySelf = this;
+  return axios({
+    method: 'post',
+    url: mySelf.$buildUrl(myUrl),
+    data: formData,
+  }).then(response => {
+    if (onSuccess && typeof onSuccess == "function")
+      onSuccess(response);
+  })
+    .catch(function (error) {
+      var exception = "";
+      var colour = "danger";
+      if (error.response) {
+        if (error.response.status == 401) {
+          exception = error.response.data.message;
+          colour = "warning";
+        } else if (error.response.status == 405) {
+          exception = error.response.data.message;
+          colour = "warning";
+        } else if (error.response.status == 498) {
+          localStorage.setItem("accessToken", "");
+          exception = error.response.data.message;
+          colour = "warning";
+        }
+      } else {
+        exception = error.message;
+        colour = "danger";
+      }
+      mySelf.$vs.notify({
+        time: 6000,
+        title: 'Error',
+        text: exception,
+        color: colour,
+        iconPack: 'feather',
+        icon: 'icon-alert-circle'
+      });
+    })
+    .finally(onFinally);
+}
 
 // API Calls
 import './http/requests'
