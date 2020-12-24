@@ -11,6 +11,37 @@
     <div>       
       ENRICO
       <vs-button class="w-full" @click="getItems()">GET ITEMS</vs-button> 
+
+       <vx-card class="grid-view-item mb-base overflow-hidden">
+                <template slot="no-body">
+
+                    <!-- ITEM IMAGE -->
+                    <div class="item-img-container bg-white h-64 flex items-center justify-center mb-4 cursor-pointer">
+                        <img src="https://post.healthline.com/wp-content/uploads/2019/04/Weed_Orange_1200x628-facebook.jpg" class="grid-view-img px-4">
+                    </div>
+                    <div class="item-details px-4">
+
+                        <!-- RATING & PRICE -->
+                        <div class="flex justify-between items-center">
+                            <div class="text-warning border border-solid border-warning flex py-1 px-2 rounded">
+                                <span class="text-sm mr-1">{{items[0].description}}</span>
+                                <feather-icon icon="StarIcon" svgClasses="h-4 w-4" />
+                            </div>
+                            <h6 class="font-bold">{{items[0].price}}</h6>
+                        </div>
+
+                        <!-- TITLE & DESCRIPTION -->
+                        <div class="my-4">
+                            <h6 class="truncate font-semibold mb-1 hover:text-primary cursor-pointer" @click="navigate_to_detail_view">{{items[0].id}}</h6>
+                            <p class="item-description truncate text-sm">Big Dicks</p>
+                        </div>
+                    </div>
+
+                    <!-- SLOT: ACTION BUTTONS -->
+                    <slot name="action-buttons" />
+                </template>
+            </vx-card>
+      
     </div>
 </template>
 
@@ -52,6 +83,7 @@ export default {
   },
   data () {
     return {
+      items: [],
       searchClient: algoliasearch(
         'latency',
         '6be0576ff61c053d5f9a3225e2a90f76'
@@ -129,16 +161,22 @@ export default {
       self = this;
         var onSuccess = function (response) {
           self.items = response.data;
+          debugger
         };
         var onFinally = function () {
           console.log(self.items);
         };
-
         self.$ajaxGet(self, "Item/getItemList", onSuccess, onFinally);
     }
   },
   created () {
     this.setSidebarWidth()
+  },
+  mounted (){   
+    self = this;
+    self.getItems();
+
+    self.items = self.items;
   }
 }
 
