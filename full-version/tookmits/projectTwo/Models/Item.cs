@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace projectTwo.Models
 {
-    public class EducationField
+    public class Item
     {
         [Key]
         public int Id { get; set; }
-        public string Name { get; set; }
-        public virtual ICollection<User> Users { get; set; }
-
+        public string Description { get; set; }
+        public float Price { get; set; }
     }
 }
