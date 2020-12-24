@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAftmHFv+Zjkm0yqgLJgMhVgAAAAACAAAAAAAQZgAAAAEAACAAAADOjkFpQQ3EMOtMa4I56PvL5ZnxScnUs9fo0OzffJFxeAAAAAAOgAAAAAIAACAAAAD/uLeMsmkmDE9w8Y8uPY2CeRDilQ9XTrq8VH2yqagyAoAAAAB5ezsVVCxmMqo8BeKzUG/IIpfahvcSPgJmZu/ivAFwnSY5AUB9csFQZ8k6CkeP1VdHKDwFrqrEAUS1mP3W64834N3g33P4ZQCKkqcyhFtzc7c5oiXi55aJcLp8Y0uewUiOiXQcdVmrZhFckHWuC/48i9mih0fAZfwxeTrgpODrxEAAAABcgos9zxW4WDmIRvJtH2sbj5J4pzBpCvlYpbfbM6ohAe9zXJ2RdxOliXbt4FM04925QfhFclqG0sOr6cXSLnIl</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Data Source=tcp:projectserveremployees.database.windows.net,1433%3bInitial Catalog=ProjectEmployees%3bUser Id=LT69Baby%40projectserveremployees%3bPassword=Tp6859TreDoUX</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="projectTwo.Data.Context">
+      <Value>Data Source=tcp:projectserveremployees.database.windows.net,1433%3bInitial Catalog=ProjectEmployees%3bUser Id=LT69Baby%40projectserveremployees%3bPassword=Tp6859TreDoUX</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>
